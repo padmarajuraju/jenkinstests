@@ -20,13 +20,13 @@ import axios from 'axios';
   function vaccinated(){
 	var slotid = cardData.slot.slotId;
 
-	// let url = "http://localhost:8081/slot-booking-service/api/v1/slot/status/"+slotid+"?status=EXPIRED";
-  let url = "http://52.14.203.230:8081/slot-booking-service/api/v1/slot/status/"+slotid+"?status=EXPIRED";
+	// let url = "http://localhost:8080/slot-booking-service/api/v1/slot/status/"+slotid+"?status=EXPIRED";
+  let url = "http://52.14.203.230:8080/slot-booking-service/api/v1/slot/status/"+slotid+"?status=EXPIRED";
 	axios.put(url).then(res=>{
 	})
   
-  // var url2 = "http://localhost:8081/vaccination-center-service/api/v1/slots/update/"+slotid+"?status=EXPIRED"
-  var url2 = "http://52.14.203.230:8081/vaccination-center-service/api/v1/slots/update/"+slotid+"?status=EXPIRED"
+  // var url2 = "http://localhost:8080/vaccination-center-service/api/v1/slots/update/"+slotid+"?status=EXPIRED"
+  var url2 = "http://52.14.203.230:8080/vaccination-center-service/api/v1/slots/update/"+slotid+"?status=EXPIRED"
   axios.put(url2).then(res2=>{
    
 	})
@@ -36,8 +36,8 @@ import axios from 'axios';
 
   function cancelSlot(){
 	var slotemail = cardData.userEmailId;
-	// let url = "http://localhost:8081/slot-booking-service/api/v1/slotdelete/"+slotemail;
-  let url = "http://52.14.203.230:8081/slot-booking-service/api/v1/slotdelete/"+slotemail;
+	// let url = "http://localhost:8080/slot-booking-service/api/v1/slotdelete/"+slotemail;
+  let url = "http://52.14.203.230:8080/slot-booking-service/api/v1/slotdelete/"+slotemail;
 
   console.log(cardData)
 	axios.delete(url).then(res=>{
@@ -45,8 +45,8 @@ import axios from 'axios';
 	}); 
 
   var slotidc = cardData.slot.slotId;
-  // var url2 = "http://localhost:8081/vaccination-center-service/api/v1/slots/"+slotidc;
-  var url2 = "http://52.14.203.230:8081/vaccination-center-service/api/v1/slots/"+slotidc;
+  // var url2 = "http://localhost:8080/vaccination-center-service/api/v1/slots/"+slotidc;
+  var url2 = "http://52.14.203.230:8080/vaccination-center-service/api/v1/slots/"+slotidc;
   axios.delete(url2).then(res2=>{
     console.log(res2.data,"doneVCS");
 	})

@@ -19,8 +19,8 @@ function EditProfile() {
     const [renderFlag, setRenderFlag] = useState(false);
 
     const getUserDetailsById = (id) => {
-        // var url = "http://localhost:8081/user-service/api/v1/vaccination-center/" + id;
-        var url = "http://52.14.203.230:8081/user-service/api/v1/vaccination-center/" + id;
+        // var url = "http://localhost:8080/user-service/api/v1/vaccination-center/" + id;
+        var url = "http://52.14.203.230:8080/user-service/api/v1/vaccination-center/" + id;
         return fetch(url,
             {
                 headers: {
@@ -270,9 +270,9 @@ function updateUserDetails(user) {
     updatedUser.vaccinators = updatedVaccinator
     updatedUser.address = updatedAddress;
     console.log(updatedUser)
-    // var url = "http://localhost:8081/user-service/api/v1/vaccination-center/" + user.centerId;
+    // var url = "http://localhost:8080/user-service/api/v1/vaccination-center/" + user.centerId;
 
-    var url = "http://52.14.203.230:8081/user-service/api/v1/vaccination-center/" + user.centerId;
+    var url = "http://52.14.203.230:8080/user-service/api/v1/vaccination-center/" + user.centerId;
 
     return fetch(url,
         {

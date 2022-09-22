@@ -32,7 +32,7 @@ function Login() {
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({...user})
         };
-        fetch('http://52.14.203.230:8081/authentication-service/api/v1/login', requestOptions)
+        fetch('http://52.14.203.230:8080/authentication-service/api/v1/login', requestOptions)
             .then((result) => {
                 if (result.status === 200) {
                     const requestOptions1 = {
@@ -40,7 +40,7 @@ function Login() {
                         headers: { 'Content-Type': 'application/json' }
                         
                     };
-                    fetch('http://52.14.203.230:8081/user-service/api/v1/user/alluser/'+user.userEmail, requestOptions1).then((res)=>{
+                    fetch('http://52.14.203.230:8080/user-service/api/v1/user/alluser/'+user.userEmail, requestOptions1).then((res)=>{
                         if(res.status==200){
                             return Promise.resolve(res.json());
                         }else {

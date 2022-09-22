@@ -177,8 +177,8 @@ const SearchTab = (props) => {
     //get vaccination  centers json
     const getVCenters = (reseting) => {
         pickVCenter = [];
-        // fetch("http://localhost:8081/user-service/api/v1/vaccination-center/getAllVaccinationCenter", {
-            fetch("http://52.14.203.230:8081/user-service/api/v1/vaccination-center/getAllVaccinationCenter", {
+        // fetch("http://localhost:8080/user-service/api/v1/vaccination-center/getAllVaccinationCenter", {
+            fetch("http://52.14.203.230:8080/user-service/api/v1/vaccination-center/getAllVaccinationCenter", {
             headers: {
                 'Content-Type': 'application/json',
                 'Accept': 'application/json'
@@ -223,13 +223,13 @@ const SearchTab = (props) => {
         datetopass = newdate;
         let url;
         if (reseting == true) {
-            // url = 'http://localhost:8081/vaccination-center-service/api/v1/slots/available/count/' + e.centerEmail + '?date=' + today;
-            url = 'http://52.14.203.230:8081/vaccination-center-service/api/v1/slots/available/count/' + e.centerEmail + '?date=' + today;
+            // url = 'http://localhost:8080/vaccination-center-service/api/v1/slots/available/count/' + e.centerEmail + '?date=' + today;
+            url = 'http://52.14.203.230:8080/vaccination-center-service/api/v1/slots/available/count/' + e.centerEmail + '?date=' + today;
             document.getElementById('date').value = today;
         }
         else {
-            // url = 'http://localhost:8081/vaccination-center-service/api/v1/slots/available/count/' + e.centerEmail + '?date=' + newdate;
-            url = 'http://52.14.203.230:8081/vaccination-center-service/api/v1/slots/available/count/' + e.centerEmail + '?date=' + newdate;
+            // url = 'http://localhost:8080/vaccination-center-service/api/v1/slots/available/count/' + e.centerEmail + '?date=' + newdate;
+            url = 'http://52.14.203.230:8080/vaccination-center-service/api/v1/slots/available/count/' + e.centerEmail + '?date=' + newdate;
         }
 
         try {
@@ -263,8 +263,8 @@ const SearchTab = (props) => {
         pickVCenter = [];
         setVcarray([]);
         setDateflag(false);
-        // return fetch("http://localhost:8081/user-service/api/v1/vaccination-center/getAllVaccinationCenter", {
-            return fetch("http://52.14.203.230:8081/user-service/api/v1/vaccination-center/getAllVaccinationCenter", {
+        // return fetch("http://localhost:8080/user-service/api/v1/vaccination-center/getAllVaccinationCenter", {
+            return fetch("http://52.14.203.230:8080/user-service/api/v1/vaccination-center/getAllVaccinationCenter", {
             headers: {
                 'Content-Type': 'application/json',
                 'Accept': 'application/json'
@@ -299,12 +299,12 @@ const SearchTab = (props) => {
         document.getElementById("pinsearchinfo").innerHTML = `Showing Results for PINCODE : ${pincode}`;
         let url;
         if (pinreset == true) {
-            // url = 'http://localhost:8081/vaccination-center-service/api/v1/slots/available/count/' + e.centerEmail + '?date=' + today;
-            url = 'http://52.14.203.230:8081/vaccination-center-service/api/v1/slots/available/count/' + e.centerEmail + '?date=' + today;
+            // url = 'http://localhost:8080/vaccination-center-service/api/v1/slots/available/count/' + e.centerEmail + '?date=' + today;
+            url = 'http://52.14.203.230:8080/vaccination-center-service/api/v1/slots/available/count/' + e.centerEmail + '?date=' + today;
             document.getElementById('pindate').value = today;
         } else {
-            // url = 'http://localhost:8081/vaccination-center-service/api/v1/slots/available/count/' + e.centerEmail + '?date=' + newdate;
-            url = 'http://52.14.203.230:8081/vaccination-center-service/api/v1/slots/available/count/' + e.centerEmail + '?date=' + newdate;
+            // url = 'http://localhost:8080/vaccination-center-service/api/v1/slots/available/count/' + e.centerEmail + '?date=' + newdate;
+            url = 'http://52.14.203.230:8080/vaccination-center-service/api/v1/slots/available/count/' + e.centerEmail + '?date=' + newdate;
         }
 
         try {
@@ -339,8 +339,8 @@ const SearchTab = (props) => {
         failcount = 0;
         successcount = 0;
          tempVCenter.map((e) => {
-            //  let url = 'http://localhost:8081/vaccination-center-service/api/v1/slots/available/count/' + e.centerEmail + '?date=' + newdate;
-            let url = 'http://52.14.203.230:8081/vaccination-center-service/api/v1/slots/available/count/' + e.centerEmail + '?date=' + newdate;
+            //  let url = 'http://localhost:8080/vaccination-center-service/api/v1/slots/available/count/' + e.centerEmail + '?date=' + newdate;
+            let url = 'http://52.14.203.230:8080/vaccination-center-service/api/v1/slots/available/count/' + e.centerEmail + '?date=' + newdate;
             try {
                 axios.get(url).then(res => {
                     successcount = successcount + 1;
@@ -364,8 +364,8 @@ const SearchTab = (props) => {
 
     const datePINFilter = () => {
         setVcarray([]);
-        // let url1 = "http://localhost:8081/user-service/api/v1/vaccination-center/getAllVaccinationCenter";
-        let url1 = "http://52.14.203.230:8081/user-service/api/v1/vaccination-center/getAllVaccinationCenter";
+        // let url1 = "http://localhost:8080/user-service/api/v1/vaccination-center/getAllVaccinationCenter";
+        let url1 = "http://52.14.203.230:8080/user-service/api/v1/vaccination-center/getAllVaccinationCenter";
         let pincode1 = document.getElementById("pincode").value;
 
         try {
@@ -374,8 +374,8 @@ const SearchTab = (props) => {
                 if (tempVCenter.length > 0) {
                     tempVCenter.map((e) => {
                         var newdate1 = document.getElementById("pindate").value;
-                        // let url2 = 'http://localhost:8081/vaccination-center-service/api/v1/slots/available/count/' + e.centerEmail + '?date=' + newdate1;
-                        let url2 = 'http://52.14.203.230:8081/vaccination-center-service/api/v1/slots/available/count/' + e.centerEmail + '?date=' + newdate1;
+                        // let url2 = 'http://localhost:8080/vaccination-center-service/api/v1/slots/available/count/' + e.centerEmail + '?date=' + newdate1;
+                        let url2 = 'http://52.14.203.230:8080/vaccination-center-service/api/v1/slots/available/count/' + e.centerEmail + '?date=' + newdate1;
                         try {
                             axios.get(url2).then(res => {
                                 if (e.address.pincode == pincode1) {
