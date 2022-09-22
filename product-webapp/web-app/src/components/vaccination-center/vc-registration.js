@@ -37,7 +37,7 @@ function VCRegistration() {
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({...addCenter})
         };
-        fetch('http://52.71.36.236:8080/user-service/api/v1/vaccination-center/addVaccineCenter', requestOptions)
+        fetch('http://52.14.203.230:8080/user-service/api/v1/vaccination-center/addVaccineCenter', requestOptions)
             .then((result) => {
                 if (result.status === 201) {
                     setOpen(true);
