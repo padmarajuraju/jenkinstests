@@ -33,8 +33,8 @@ function BasicInformation() {
     const [renderFlag, setRenderFlag] = useState(false);
 
     const getUserDetailsById = (id) => {
-        // var url = "http://localhost:8080/user-service/api/v1/user/user/" + id;
-        var url = "http://52.14.203.230:8080/user-service/api/v1/user/user/" + id;
+        // var url = "http://localhost:8081/user-service/api/v1/user/user/" + id;
+        var url = "http://52.14.203.230:8081/user-service/api/v1/user/user/" + id;
         return fetch(url,
             {
                 headers: {
@@ -360,8 +360,8 @@ function SaveChanges(user) {
     updatedUser.userVaccinationInfo = [updatedUserVaccinationInfo];
     updatedUser.password = user.password
 
-    // var url = "http://localhost:8080/user-service/api/v1/user/user/" + user.id;
-    var url = "http://52.14.203.230:8080/user-service/api/v1/user/user/" + user.id;
+    // var url = "http://localhost:8081/user-service/api/v1/user/user/" + user.id;
+    var url = "http://52.14.203.230:8081/user-service/api/v1/user/user/" + user.id;
 
     return fetch(url,
         {

@@ -63,8 +63,8 @@ const VcCards = (props, datetopass) => {
 
   // API to fetch available slot by email id used for appointment confirmation added by Deepika.
   const getSlotAvailability = (queryParameter) => {
-    // let url = "http://localhost:8080/vaccination-center-service/api/v1/slots/available/" + queryParameter;
-    let url = "http://52.14.203.230:8080/vaccination-center-service/api/v1/slots/available/" + queryParameter;
+    // let url = "http://localhost:8081/vaccination-center-service/api/v1/slots/available/" + queryParameter;
+    let url = "http://52.14.203.230:8081/vaccination-center-service/api/v1/slots/available/" + queryParameter;
     return fetch(url,
       {
         headers: {
@@ -88,8 +88,8 @@ const VcCards = (props, datetopass) => {
 
   // API to fetch user information by email id used for appointment confirmation  added by Deepika.
   const UserInformationByEmailId = (emailId) => {
-    // let url = "http://localhost:8080/user-service/api/v1/user/user/" + emailId;
-    let url = "http://52.14.203.230:8080/user-service/api/v1/user/user/" + emailId;
+    // let url = "http://localhost:8081/user-service/api/v1/user/user/" + emailId;
+    let url = "http://52.14.203.230:8081/user-service/api/v1/user/user/" + emailId;
     return fetch(url,
       {
         headers: {

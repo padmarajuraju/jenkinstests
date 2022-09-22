@@ -22,8 +22,8 @@ function VCProfile() {
     const [userdata , setuserData] = useState([]);
     const getUserData = () => {
         let email = localStorage.getItem("centerEmail");
-        // let url = "http://localhost:8080/user-service/api/v1/vaccination-center/"+email;
-        let url = "http://52.14.203.230:8080/user-service/api/v1/vaccination-center/"+email;
+        // let url = "http://localhost:8081/user-service/api/v1/vaccination-center/"+email;
+        let url = "http://52.14.203.230:8081/user-service/api/v1/vaccination-center/"+email;
         return fetch(url , {headers:{
         'Content-Type': 'application/json',
         'Accept': 'application/json'

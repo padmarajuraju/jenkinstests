@@ -130,8 +130,8 @@ function Confirmation() {
         message: "Please select slot time....",
       });
     } else {
-      // fetch('http://localhost:8080/slot-booking-service/api/v1/slot',
-      fetch('http://52.14.203.230:8080/slot-booking-service/api/v1/slot',
+      // fetch('http://localhost:8081/slot-booking-service/api/v1/slot',
+      fetch('http://52.14.203.230:8081/slot-booking-service/api/v1/slot',
         {
           headers: {
             'Content-Type': 'application/json',
@@ -162,8 +162,8 @@ function Confirmation() {
   }
 
   function updateStatusAsBooked(slotId) {
-    // let url = "http://localhost:8080/slot-booking-service/api/v1/slot/status/" + slotId + "?status=BOOKEED";
-    let url = "http://52.14.203.230:8080/slot-booking-service/api/v1/slot/status/" + slotId + "?status=BOOKEED";
+    // let url = "http://localhost:8081/slot-booking-service/api/v1/slot/status/" + slotId + "?status=BOOKEED";
+    let url = "http://52.14.203.230:8081/slot-booking-service/api/v1/slot/status/" + slotId + "?status=BOOKEED";
     return fetch(url,
       {
         headers: {
