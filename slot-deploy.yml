@@ -3,15 +3,15 @@ apiVersion: v1
 kind: Service
 metadata:
   labels:
-    app: interviewer-service
-  name: interviewer-service
+    app: slot-booking-service
+  name: slot-booking-service
 spec:
   ports:
-  - port: 8097
+  - port: 8087
     protocol: TCP
-    targetPort: 8097
+    targetPort: 8087
   selector:
-    app: interviewer-service
+    app: slot-booking-service
   type: ClusterIP
 ...
 
@@ -19,25 +19,25 @@ spec:
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: interviewer-service
+  name: slot-booking-service
   labels:
-    app: interviewer-service
+    app: slot-booking-service
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: interviewer-service
+      app: slot-booking-service
   template:
     metadata:
       labels:
-        app: interviewer-service
+        app: slot-booking-service
     spec:
       containers:
-      - name: interviewer-service
-        image: param036/wednight_interviewer-service:wednight_interviewer-service
+      - name: slot-booking-service
+        image: naveen0005/capstone1:slot-booking-service
         imagePullPolicy: IfNotPresent
         ports:
-        - containerPort: 8097
+        - containerPort: 8087
         env:
         - name: servername_eureka
           value: "eureka-server"
