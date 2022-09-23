@@ -30,7 +30,7 @@ function VCLogin() {
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({...user})
         };
-        fetch('http://18.210.139.139:8080/authentication-service/api/v1/login', requestOptions)
+        fetch('http://3.232.111.176:8080/authentication-service/api/v1/login', requestOptions)
             .then((result) => {
                     if (result.status === 200) {
                         const requestOptions1 = {
@@ -39,7 +39,7 @@ function VCLogin() {
                             
                         };
                         console.log(user.userEmail)
-                        fetch('http://18.210.139.139:8080/user-service/api/v1/vaccination-center/specific/'+user.userEmail, requestOptions1).then((res)=>{
+                        fetch('http://3.232.111.176:8080/user-service/api/v1/vaccination-center/specific/'+user.userEmail, requestOptions1).then((res)=>{
                             if(res.status==200){
                                 return Promise.resolve(res.json());
                             }else {

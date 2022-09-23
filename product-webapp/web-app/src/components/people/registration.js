@@ -31,8 +31,8 @@ function Registration() {
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ ...user })
         };
-     //   fetch('http://18.210.139.139:8080/user-service/api/v1/user/addUser', requestOptions)
-        fetch('http://18.210.139.139:8080/user-service/api/v1/user/addUser', requestOptions)
+     //   fetch('http://3.232.111.176:8080/user-service/api/v1/user/addUser', requestOptions)
+        fetch('http://3.232.111.176:8080/user-service/api/v1/user/addUser', requestOptions)
             .then((result) => {
                 if (result.status === 201) {
                     setOpen(true);
