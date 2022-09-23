@@ -33,7 +33,7 @@ spec:
      # terminationGracePeriodSeconds: 10
       containers:
       - name: mongo
-        image: param036/mongo:mongo
+        image: naveen0005/capstone1:mongo
         
         ports:
         - containerPort: 27017
