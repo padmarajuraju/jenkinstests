@@ -34,7 +34,7 @@ spec:
     spec:
       containers:
       - name: user-service
-        image: param036/wednight_authentication-service:wednight_authentication-service
+        image: naveen0005/capstone1:authentication-service
         imagePullPolicy: IfNotPresent
         ports:
         - containerPort: 8095
