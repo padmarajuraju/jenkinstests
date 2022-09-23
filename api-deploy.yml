@@ -15,12 +15,14 @@ spec:
     spec:
       containers:
         - name: api
-          image: param036/wednight_api-gateway:wednight_api-gateway
+          image: naveen0005/capstone1:api-gateway
           ports:
             - containerPort: 8080
           env:
             - name: servername_eureka
               value: "eureka-server"
+            - name: servername_config
+              value: "config-server"  
 ...
 ---
 apiVersion: v1
