@@ -34,11 +34,9 @@ spec:
     spec:
       containers:
       - name: config-server
-        image: param036/wednight_config-server:wednight_config-server
+        image: naveen0005/capstone1:config-server
         imagePullPolicy: IfNotPresent
         ports:
         - containerPort: 8888
-        env:
-        - name: servername_eureka
-          value: "eureka-server"
+        
 ...
